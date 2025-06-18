@@ -1,4 +1,4 @@
-const CardDetail = () => {
+const ProductDetail = () => {
   return (
     <>
       <section className="py-12 sm:py-16">
@@ -275,4 +275,4 @@ const CardDetail = () => {
     </>
   );
 };
-export default CardDetail;
+export default ProductDetail;

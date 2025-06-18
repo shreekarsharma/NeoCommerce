@@ -8,7 +8,6 @@ const Cards = () => {
       const response = await fetch(`https://fakestoreapi.com/products`);
       if (response.ok) {
         setProducts(await response.json());
-        console.log(products);
       } else {
         console.error("404");
       }

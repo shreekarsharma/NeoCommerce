@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
-      <header className="mb-2 px-4 shadow">
+      <header className="mb-2 px-4 shadow sticky top-0 z-50 bg-white">
         <div className="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-          <a className="flex items-center text-2xl font-black" href="/">
+          <Link className="flex items-center text-2xl font-black" to="/home">
             <span className="mr-2 text-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +21,7 @@ const Navbar = () => {
             </span>
             <span>Neo</span>
             <span className="text-blue-600">Commerce</span>
-          </a>
+          </Link>
           <input className="peer hidden" type="checkbox" id="navbar-open" />
           <label
             className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden"
@@ -45,27 +47,37 @@ const Navbar = () => {
           >
             <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
               <li className="">
-                <a className="text-gray-600 hover:text-blue-600" href="#">
+                <Link className="text-gray-600 hover:text-blue-600" to="/home">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="">
-                <a className="text-gray-600 hover:text-blue-600" href="#">
-                  Sale
-                </a>
+                <Link className="text-gray-600 hover:text-blue-600" to="/about">
+                  About
+                </Link>
               </li>
               <li className="">
-                <a className="text-gray-600 hover:text-blue-600" href="#">
+                <Link className="text-gray-600 hover:text-blue-600" to="/contact">
+                  Contact
+                </Link>
+              </li>
+              <li className="">
+                <Link className="text-gray-600 hover:text-blue-600" to="/product">
+                  Product
+                </Link>
+              </li>
+              <li className="">
+                <Link className="text-gray-600 hover:text-blue-600" to="/cart">
                   Cart
-                </a>
+                </Link>
               </li>
               <li className="mt-2 sm:mt-0">
-                <a
+                <Link
                   className="rounded-xl border-2 border-blue-600 px-6 py-2 font-medium text-blue-600 hover:bg-blue-600 hover:text-white"
-                  href="#"
+                  to="/login"
                 >
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
